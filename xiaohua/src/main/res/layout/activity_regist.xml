@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_regist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ren.tarena.xiaohua.activity.RegistActivity">
+
+
+    <TextView
+        android:background="#F86A02"
+        android:id="@+id/title_regist"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="用户注册"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+    <TextView
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/textview_regist_num"
+        android:layout_below="@+id/title_regist"
+        android:text="注册账号:" />
+
+    <EditText
+        android:textSize="15sp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="match_parent"
+        android:id="@+id/edittext_regist_num"
+        android:background="@mipmap/item_blank_bg"
+        android:layout_below="@+id/title_regist"
+        android:layout_toEndOf="@+id/textview_regist_num"
+        android:hint="请输入手机号" />
+
+    <TextView
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/textview_regist_pwd"
+        android:layout_below="@+id/textview_regist_num"
+        android:text="设置密码：" />
+
+    <EditText
+        android:textSize="15sp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:id="@+id/edittext_regist_pwd"
+        android:background="@mipmap/item_blank_bg"
+        android:layout_below="@+id/textview_regist_num"
+        android:layout_toEndOf="@+id/textview_regist_pwd"
+        android:hint="请输入密码" />
+
+    <TextView
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/textview_regist_password"
+        android:layout_below="@+id/textview_regist_pwd"
+        android:text="确认密码：" />
+
+    <EditText
+        android:textSize="15sp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:inputType="textPassword"
+        android:id="@+id/edittext_regist_password"
+        android:background="@mipmap/item_blank_bg"
+        android:layout_below="@+id/textview_regist_pwd"
+        android:layout_toEndOf="@+id/textview_regist_password"
+        android:hint="请确认密码" />
+    <Button
+        android:text="注册"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:onClick="regist"
+        android:background="@drawable/button_shape"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edittext_regist_password" />
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Xiaohua</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">
+        [笑话]　报错警
+一男与一女人进一房间，男的说：“我在上面你在下面。”过了一会儿，听女的说：“准备好了，快上呀”
+        “歪了左边点” “右边点” “下点、再下点” “好！对正了，用力” “再用力” “哎哟，进了，
+        全进了”“用力压紧，好了。 ”男的说：“休息一会再来。”...
+        [笑话]　游泳
+游泳池边瘦子对胖子：你千万不要下水胖子一头雾水瘦子：你下水，水会全满出来胖子笑着：呵呵，
+        看你冷得哆嗦样，我下水，水就暖和了胖子下水后，的确没有影响到瘦子游泳过了好一会，
+        胖子猛地起身上岸瘦子扑腾，趴在了游泳池底部，一动没动...
+    [笑话]　好的、好的、也是好的
+有一位老人，耳朵有点背，别人说话他听不清，但又最爱：“好的、好的……”的答话。
+        一天一个亲戚来家里做客，这亲戚家里有点倒霉。吃饭的时侯他一边吃一边诉说家中的不幸。
+        他说：“媳妇被人拐跑了。”老人答说：“好的...</string>
+
+    <string name="jokefragment">赖哈蚂的单相思
+赖哈蚂的 单相思一只流浪天空的白天鹅飞累了，漂落在一片葱绿的草地小息，她伸展着洁白美丽的长颈，
+        梳展着漂亮迷人的翅膀。打算找点食物打尖，喝点露水润喉。躲在草丛里寂寞了多年的赖哈蚂见了
+        这只美貌无比的白天鹅，完全惊呆了，好久好久才平静下来开始想入..</string>
+    <string name="jokefragment1">我是雷锋
+只要人人都献出一份爱，世界将变成美好的人间。 ——题记 傍晚，我慌忙的走在回家的路上。与街上的车
+        水马龙相比，显得有些格格不入。本无心顾及身边的夜景，只想着赶紧回家给我妈过个生日。可就在
+        这时，前方人群中突然传出一声呐喊：“别跑，钱包还我！"声音...</string>
+    <string name="jokefragment2">[笑话]　游泳
+游泳池边瘦子对胖子：你千万不要下水胖子一头雾水瘦子：你下水，水会全满出来胖子笑着：呵呵，看你冷
+        得哆嗦样，我下水，水就暖和了胖子下水后，的确没有影响到瘦子游泳过了好一会，胖子猛地起身上岸
+        瘦子扑腾，趴在了游泳池底部，一动没动...</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+</resources>

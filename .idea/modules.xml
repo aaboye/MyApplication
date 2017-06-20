@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MyApplication.iml" filepath="$PROJECT_DIR$/MyApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dazhongdianping/dazhongdianping.iml" filepath="$PROJECT_DIR$/dazhongdianping/dazhongdianping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/listSamples/listSamples.iml" filepath="$PROJECT_DIR$/listSamples/listSamples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pullToRefresh_Library/pullToRefresh_Library.iml" filepath="$PROJECT_DIR$/pullToRefresh_Library/pullToRefresh_Library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewpagerIndicator_library/viewpagerIndicator_library.iml" filepath="$PROJECT_DIR$/viewpagerIndicator_library/viewpagerIndicator_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xiaohua/xiaohua.iml" filepath="$PROJECT_DIR$/xiaohua/xiaohua.iml" />
+    </modules>
+  </component>
+</project>

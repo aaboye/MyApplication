@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ren.tarena.xiaohua.fragment.FunnyFragment">
+
+    <include
+        android:id="@+id/actionbar_funny"
+        layout="@layout/include_actionbar" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:background="#bbbbbb"
+        android:id="@+id/swipeRefresh_funny"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_funny"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

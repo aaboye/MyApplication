@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imageView_listView_main"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+    <TextView
+        android:id="@+id/textView_name_listView_main"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="5dp"
+        android:layout_toRightOf="@+id/imageView_listView_main"
+        android:text="南城香"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/textView_distance_listView_main"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentEnd="true"
+        android:text="1000m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginStart="5dp"
+        android:id="@+id/textView_content_listView_main"
+        android:textSize="16sp"
+        android:singleLine="true"
+        android:layout_below="@+id/textView_name_listView_main"
+        android:layout_toRightOf="@id/imageView_listView_main"
+        android:text="艰苦艰苦的感觉恐龙级的实力机构看对方了解"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/wifi_listView_main"
+        android:layout_marginStart="5dp"
+        android:layout_toRightOf="@+id/imageView_listView_main"
+        android:layout_below="@+id/textView_content_listView_main"
+        android:text="免费WiFi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/RMB_listView_main"
+        android:textColor="@color/yellow"
+        android:textSize="18sp"
+        android:layout_marginStart="5dp"
+        android:layout_toRightOf="@+id/imageView_listView_main"
+        android:layout_below="@+id/wifi_listView_main"
+        android:text="$100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/count_listView_main"
+        android:layout_marginEnd="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_below="@+id/wifi_listView_main"
+        android:text="已售1523"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

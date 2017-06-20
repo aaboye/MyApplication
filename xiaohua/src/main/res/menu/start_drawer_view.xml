@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/cehua_gerenzhongxin"
+            android:icon="@mipmap/denglu"
+            android:title="个人中心" />
+        <item
+            android:id="@+id/cehua_wodeshoucang"
+            android:icon="@mipmap/wodeshoucang"
+            android:title="我的收藏" />
+    </group>
+
+    <item android:title="通知">
+        <menu>
+            <item
+                android:id="@+id/cehua_xiaoxi"
+                android:icon="@mipmap/wodexiaoxi"
+                android:title="我的消息" />
+            <item
+                android:id="@+id/cehua_haoyou"
+                android:icon="@mipmap/haoyou"
+                android:title="我的好友" />
+
+        </menu>
+    </item>
+    <item android:title="">
+        <item
+            android:id="@+id/cehua_shezhi"
+            android:icon="@mipmap/shezhi"
+            android:title="设置" />
+        <item
+            android:id="@+id/cehua_tuichu"
+            android:icon="@mipmap/tuichu"
+            android:title="退出" />
+    </item>
+
+</menu>

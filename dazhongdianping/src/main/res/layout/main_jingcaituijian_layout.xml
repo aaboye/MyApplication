@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+        android:text="    精彩推荐"
+        android:textSize="16dp" />
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image1_tuijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tuijian1" />
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/tv1_tuijian"
+            android:layout_toRightOf="@+id/image1_tuijian"
+            android:text="一波现金券@你"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@id/image1_tuijian"
+            android:layout_below="@+id/tv1_tuijian"
+            android:text="毕业季一起对话童年"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image2_tuijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tuijian2" />
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@id/image2_tuijian"
+            android:id="@+id/tv2_tuijian"
+            android:text="小S喊你免费领"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/image2_tuijian"
+            android:layout_below="@+id/tv2_tuijian"
+            android:text="耳机、涂色书等礼包"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image3_tuijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tuijain3" />
+
+        <TextView
+            android:textStyle="bold"
+            android:text="开扒新人气餐馆"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/image3_tuijian"
+            android:id="@+id/tv3_tuijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/image3_tuijian"
+            android:text="这碗今夏最销魂"
+            android:layout_below="@+id/tv3_tuijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+        android:text="    猜你喜欢"
+        android:textSize="16dp" />
+
+</LinearLayout>
