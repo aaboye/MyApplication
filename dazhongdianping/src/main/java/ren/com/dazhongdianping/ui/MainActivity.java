@@ -6,6 +6,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,7 @@ import com.android.volley.Response;
 import com.google.gson.Gson;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.j256.ormlite.stmt.query.In;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +37,8 @@ import ren.com.dazhongdianping.R;
 import ren.com.dazhongdianping.adapter.DealAdapter;
 import ren.com.dazhongdianping.entity.IdList;
 import ren.com.dazhongdianping.util.HttpUtil;
+import retrofit2.Call;
+import retrofit2.Callback;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -74,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.city_actionbar)
     public void jumpToCity(View view) {
         Intent intent = new Intent(this, CityActivity.class);
-        startActivity(intent);
+        //startActivity(intent);
+        startActivityForResult(intent,101);
     }
 
     @OnClick(R.id.imageAdd_action)
@@ -174,6 +179,22 @@ public class MainActivity extends AppCompatActivity {
 
                 int layoutId = resIDs[position % 3];
                 View view = LayoutInflater.from(MainActivity.this).inflate(layoutId, viewPager, false);
+                if (position%3==0){
+                    View foodView=view.findViewById(R.id.food_maintop_a);
+                    foodView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent=new Intent(MainActivity.this,BusinessActivity.class);
+                            intent.putExtra("city",tv_city.getText().toString());
+                            startActivity(intent);
+                        }
+                    });
+
+
+
+
+
+                }
                 container.addView(view);
                 return view;
 
@@ -227,7 +248,22 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+       /* String city = getIntent().getStringExtra("city");
+        if (!TextUtils.isEmpty(city)) {
+            tv_city.setText(city);
+        } else {
+            tv_city.setText("北京");
+        }*/
         refresh();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode==RESULT_OK&&requestCode==101){
+            String city=data.getStringExtra("city");
+            tv_city.setText(city);
+        }
     }
 
     private void refresh() {
@@ -237,13 +273,15 @@ public class MainActivity extends AppCompatActivity {
         //HttpUtil.HttpURLConnection();
         // HttpUtil.Volley();
         //HttpUtil.testRetrofit();
-        HttpUtil.getDailyList(tv_city.getText().toString(), new Response.Listener<String>() {
+        //Volley
+        /*HttpUtil.getDailyList(tv_city.getText().toString(), new Response.Listener<IdList>() {
             @Override
-            public void onResponse(String s) {
+            public void onResponse(IdList s) {
                 if (s != null) {
-                    Gson gson = new Gson();
+                   *//* Gson gson = new Gson();
                     IdList list = gson.fromJson(s, IdList.class);
-                    List<IdList.Deal> deals = list.getDeals();
+                    List<IdList.Deal> deals = list.getDeals();*//*
+                    List<IdList.Deal> deals = s.getDeals();
                     adapter.addAll(deals, true);
                 } else {
                     //今日无新增团购内容
@@ -251,6 +289,28 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 //刷新
+                ptrListView.onRefreshComplete();
+            }
+        });*/
+        //Retrofit
+        HttpUtil.getDailyListByRetrofit(tv_city.getText().toString(), new Callback<IdList>() {
+            @Override
+            public void onResponse(Call<IdList> call, retrofit2.Response<IdList> response) {
+                if (response != null) {
+                   /* IdList idList = response.body();
+                    IdList idList = new Gson().fromJson(json, IdList.class);
+                    List<IdList.Deal> deals = idList.getDeals();*/
+                    List<IdList.Deal> deals = response.body().getDeals();
+                    adapter.addAll(deals, true);
+                } else {
+                    Toast.makeText(MainActivity.this, "今日无新增团购内容", Toast.LENGTH_SHORT).show();
+                }
+                ptrListView.onRefreshComplete();
+            }
+
+            @Override
+            public void onFailure(Call<IdList> call, Throwable throwable) {
+                Log.i("TAG", "onFailure:" + throwable.getMessage());
                 ptrListView.onRefreshComplete();
             }
         });

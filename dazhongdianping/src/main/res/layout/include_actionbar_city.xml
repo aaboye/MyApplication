@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/yy_calendar_icon_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/tab_left_press"
+                android:gravity="center"
+                android:text="全部"
+                android:textColor="@drawable/words_color"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/tab_right_normal"
+                android:gravity="center"
+                android:text="海外"
+                android:textColor="@drawable/words1_color"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/search_actionbar"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/actionbar_search"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/navibar_search_icon_search"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="城市名、拼音首字母..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

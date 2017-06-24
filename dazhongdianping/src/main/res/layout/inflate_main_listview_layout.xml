@@ -10,6 +10,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp" />
     <TextView
+        android:singleLine="true"
         android:id="@+id/textView_name_listView_main"
         android:layout_marginTop="8dp"
         android:layout_marginStart="5dp"
@@ -17,7 +18,7 @@
         android:text="南城香"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content" />
     <TextView
         android:id="@+id/textView_distance_listView_main"

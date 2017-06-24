@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_city"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ren.com.dazhongdianping.ui.CityActivity">
 
+    <include
+        android:id="@+id/actionbar_city"
+        layout="@layout/include_actionbar_city" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar_city">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+        <ren.com.dazhongdianping.view.MyLetterView
+            app:letter_color="#ff0000ff"
+            android:layout_gravity="right"
+            android:id="@+id/myLetter_View"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
 </RelativeLayout>

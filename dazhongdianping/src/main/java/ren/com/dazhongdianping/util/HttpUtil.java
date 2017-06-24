@@ -1,15 +1,10 @@
 package ren.com.dazhongdianping.util;
 
-import android.content.Context;
 import android.util.Log;
 import android.widget.ImageView;
 
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.google.gson.Gson;
+import com.squareup.picasso.Picasso;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -19,19 +14,17 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ExecutionException;
 
+import ren.com.dazhongdianping.R;
 import ren.com.dazhongdianping.app.MyApp;
-import retrofit2.Call;
+import ren.com.dazhongdianping.entity.BusinessList;
+import ren.com.dazhongdianping.entity.IdList;
 import retrofit2.Callback;
-import retrofit2.Retrofit;
-import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 /**
  * 网络访问工具类
@@ -146,11 +139,30 @@ public class HttpUtil {
     public static void testRetrofit(){
      RetrofitClient.getINSTANCE().test();
     }
-    public static  void getDailyList(String city, Response.Listener<String> listener){
-        VolleyClient.getINSTANCE().getDailyAddList(city,listener);
+    public static  void getDailyList(String city, Response.Listener<IdList> listener){
+        VolleyClient.getINSTANCE().getDailyAddList2(city,listener);
+
     }
     public static void loadImage(String url,ImageView iv){
         VolleyClient.getINSTANCE().loadImage(url,iv);
+    }
+    public static void displayImage(String url,ImageView iv){
+        Picasso.with(MyApp.CONTEXT).load(url).placeholder(R.drawable.bucket_no_picture).error(R.drawable.bucket_no_picture).into(iv);
+    }
+
+    public static void getDailyListByRetrofit(String city,Callback<IdList> callback){
+        RetrofitClient.getINSTANCE().getDailyDeals3(city,callback);
+    }
+
+    public static void getCityVolley(Response.Listener<String> listener){
+        VolleyClient.getINSTANCE().getCityList(listener);
+    }
+
+    public static void getBusinessByRetrofit1(String city, Callback<BusinessList> callback5){
+        RetrofitClient.getINSTANCE().getBusinessRetrofit1(city,callback5);
+    }
+    public static void getBusinessByVolley(String city,Response.Listener<String> listener){
+        VolleyClient.getINSTANCE().getBusinessVolley(city,listener);
     }
 
 

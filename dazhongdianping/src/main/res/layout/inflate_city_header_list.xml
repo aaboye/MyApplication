@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F0F0F0"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:text="北京"
+            android:textSize="18sp" />
+
+        <TextView
+            android:textColor="#F0F0F0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="GPS定位"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:text="历史访问城市" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:text="北京" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:text="周边热门城市" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="石家庄" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="天津" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="保定" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="张家口" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="廊坊" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="辛集" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

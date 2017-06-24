@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/photo_item_business"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="100dp"
+        android:layout_height="90dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:singleLine="true"
+                android:id="@+id/name_item_business"
+                android:textSize="18dp"
+                android:layout_marginTop="8dp"
+                android:text="西部马华牛肉面"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:singleLine="true"
+                android:id="@+id/branch_name_item_business"
+                android:layout_marginTop="8dp"
+                android:text="（潘家园店）"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/pingfen_item_business"
+                android:src="@drawable/movie_star50"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/rmb_item_business"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:text="￥91/人"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:singleLine="true"
+                android:id="@+id/region_item_business"
+                android:text="十八里店"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:singleLine="true"
+                android:id="@+id/category_item_business"
+                android:layout_marginStart="8dp"
+                android:text="清真菜"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/distance_item_business"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120m" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

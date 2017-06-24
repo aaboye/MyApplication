@@ -39,7 +39,8 @@ public class DealAdapter extends MyBaseAdapter<IdList.Deal> {
         }
         IdList.Deal deal=getItem(i);
         //呈现图片
-        HttpUtil.loadImage(deal.getS_image_url(),holder.ivPic);
+       // HttpUtil.loadImage(deal.getS_image_url(),holder.ivPic);
+        HttpUtil.displayImage(deal.getS_image_url(),holder.ivPic);
 
         holder.tvTitle.setText(deal.getTitle());
         holder.tvDetail.setText(deal.getDescription());
