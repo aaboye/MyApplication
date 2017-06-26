@@ -158,8 +158,8 @@ public class HttpUtil {
         VolleyClient.getINSTANCE().getCityList(listener);
     }
 
-    public static void getBusinessByRetrofit1(String city, Callback<BusinessList> callback5){
-        RetrofitClient.getINSTANCE().getBusinessRetrofit1(city,callback5);
+    public static void getBusinessByRetrofit1(String city,String region, Callback<BusinessList> callback5){
+        RetrofitClient.getINSTANCE().getBusinessRetrofit1(city,region,callback5);
     }
     public static void getBusinessByVolley(String city,Response.Listener<String> listener){
         VolleyClient.getINSTANCE().getBusinessVolley(city,listener);

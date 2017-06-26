@@ -36,5 +36,15 @@ public class SharePreferenceUtil {
         editor.putBoolean(Constant.FIRST,false);
         editor.commit();
     }
+    public boolean isCloseBanner(){
+        return sp.getBoolean(Constant.ISCLOSE,false);
+    }
+
+    public void setCloseBanner(boolean flag){
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putBoolean(Constant.ISCLOSE,flag);
+        editor.commit();
+    }
+
 
 }

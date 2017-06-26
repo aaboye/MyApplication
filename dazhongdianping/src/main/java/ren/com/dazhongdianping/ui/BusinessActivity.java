@@ -18,6 +18,8 @@ import ren.com.dazhongdianping.adapter.BusinessAdapter;
 import ren.com.dazhongdianping.entity.BusinessList;
 import ren.com.dazhongdianping.entity.IdList;
 import ren.com.dazhongdianping.util.HttpUtil;
+import ren.com.dazhongdianping.util.SharePreferenceUtil;
+import ren.com.dazhongdianping.view.MyBanner;
 import retrofit2.Call;
 import retrofit2.Callback;
 
@@ -27,12 +29,14 @@ public class BusinessActivity extends AppCompatActivity {
     ListView listView;
     BusinessAdapter adapter;
     List<BusinessList.BusinessesBean> datas;
+    SharePreferenceUtil sharePreferenceUtil;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_business);
         ButterKnife.bind(this);
         city=getIntent().getStringExtra("city");
+        sharePreferenceUtil=new SharePreferenceUtil(this);
         initListView();
 
     }
@@ -41,6 +45,17 @@ public class BusinessActivity extends AppCompatActivity {
         datas=new ArrayList<>();
         adapter=new BusinessAdapter(this,datas);
         listView.setAdapter(adapter);
+        if (!sharePreferenceUtil.isCloseBanner()) {
+            final MyBanner myBanner = new MyBanner(this, null);
+            myBanner.OnCloseBannerListener(new MyBanner.OnCloseBannerListener() {
+                @Override
+                public void onClose() {
+                    sharePreferenceUtil.setCloseBanner(true);
+                    listView.removeHeaderView(myBanner);
+                }
+            });
+            listView.addHeaderView(myBanner);
+        }
 
     }
 
@@ -51,7 +66,7 @@ public class BusinessActivity extends AppCompatActivity {
     }
 
     private void refresh() {
-        HttpUtil.getBusinessByRetrofit1(city, new Callback<BusinessList>() {
+        HttpUtil.getBusinessByRetrofit1(city,null, new Callback<BusinessList>() {
             @Override
             public void onResponse(Call<BusinessList> call, retrofit2.Response<BusinessList> response) {
                 BusinessList businessList=response.body();

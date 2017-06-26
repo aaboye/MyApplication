@@ -1,5 +1,6 @@
 package ren.com.dazhongdianping.util;
 
+import android.text.TextUtils;
 import android.util.Log;
 
 
@@ -276,10 +277,13 @@ public class RetrofitClient {
     }
 
 
-    public void getBusinessRetrofit1(String city, final Callback<BusinessList> callback5) {
+    public void getBusinessRetrofit1(String city, String region, final Callback<BusinessList> callback5) {
         final Map<String, String> params = new HashMap<String, String>();
         params.put("city", city);
-        //params.put("regions",regions);
+        params.put("category", "美食");
+        if (!TextUtils.isEmpty(region)) {
+            params.put("region", region);
+        }
         Call<BusinessList> idcall = netService.getBusiness(params);
         idcall.enqueue(callback5);
     }
